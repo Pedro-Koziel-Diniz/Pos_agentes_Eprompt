@@ -1,0 +1,10 @@
+[project]
+name = "pos-agentes-eprompt"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "guardrails-ai==0.6.0",
+    "guardrails-api-client==0.4.0a1",
+]
