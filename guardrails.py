@@ -39,12 +39,11 @@ class DietPlan(BaseModel):
     preferences: dict = Field(
         ..., description="Restrições ou preferências alimentares (ex.: sem glúten)"
     )
-from guardrails import Guard
+
 # Definir Guardrails com Pydantic
 guard = Guard.from_pydantic(DietPlan)
 
 try:
-    from guardrails import Guard
     res = guard.validate(validator)
     print("Valid JSON passed validation.")
 except Exception as e:
