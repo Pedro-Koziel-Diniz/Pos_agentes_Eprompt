@@ -50,5 +50,8 @@ try:
     guard.validate(validator)
     response_json = json.loads(validator)
     print(response_json)
+    conversation_id = str(uuid.uuid4())
+    print(f"ID da conversa: {conversation_id}")
 except Exception as e:
     print(validator)
+    print(f"ID da conversa: {conversation_id}")
