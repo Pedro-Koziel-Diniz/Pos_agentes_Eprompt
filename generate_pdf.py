@@ -46,8 +46,20 @@ class MealPlanPDF(FPDF):
         # Espaço adicional entre os dias
         self.ln(10)
 
-# Carregar o JSON com as refeições (substitua por seu JSON carregado)
-response_json = json.loads("outputs/uuid.json")
+# Caminho do arquivo JSON
+#json_path = r"D:\GitHub\ollama-visio-teste\outputs\39e6401e-c4b4-4357-8ea6-c89da6026955.json"
+json_path = r"D:\GitHub\ollama-visio-teste\outputs\3baa52ad-6bc3-4890-a00c-aee144d05795.json"
+
+# Carregar o JSON a partir do arquivo
+try:
+    with open(json_path, 'r', encoding='utf-8') as f:
+        response_json = json.load(f)
+except FileNotFoundError:
+    print(f"Arquivo JSON não encontrado: {json_path}")
+    exit()
+except json.JSONDecodeError as e:
+    print(f"Erro ao decodificar o JSON: {e}")
+    exit()
 
 # Diretório para salvar o PDF
 output_directory = "pdfs"

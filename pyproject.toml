@@ -1,10 +1,14 @@
 [project]
-name = "pos-agentes-eprompt"
+name = "ollama-visio-teste"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "ollama>=0.4.2",
     "guardrails-ai==0.6.0",
     "guardrails-api-client==0.4.0a1",
+    "litellm>=1.53.7",
+    "pillow>=11.0.0",
+    "fpdf>=1.7.2",
 ]

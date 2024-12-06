@@ -1,0 +1,44 @@
+{
+    "segunda-feira": {
+        "08h": "1 fatia de pão integral com 1 ovo cozido e 1 fatia de abacate",
+        "12h": " peito de frango grelhado com salada de folhas verdes e 1 colher de sopa de azeite",
+        "16h": "1 maçã e 10 amêndoas",
+        "20h": "sopa de legumes com quinoa"
+    },
+    "terça-feira": {
+        "08h": "mingau de aveia com água, 1 colher de sopa de chia e 1 banana",
+        "12h": "bife magro grelhado com brócolis e arroz integral",
+        "16h": "1 iogurte natural desnatado",
+        "20h": "peixe assado com legumes ao forno"
+    },
+    "quarta-feira": {
+        "08h": "smoothie de 1 banana, 1 colher de sopa de pasta de amendoim e 200ml de leite desnatado",
+        "12h": "salada de quinoa com grão-de-bico, tomate, pepino e 1 colher de sopa de azeite",
+        "16h": "cenouras baby e 1 fatia de queijo minas",
+        "20h": "frango ao curry com couve-flor"
+    },
+    "quinta-feira": {
+        "08h": "2 claras de ovo e 1 fatia de pão integral com um pouco de queijo cottage",
+        "12h": "hambúrguer de lentilha com salada de col verde",
+        "16h": "1 pera",
+        "20h": "bowl de legumes com tofu grelhado"
+    },
+    "sexta-feira": {
+        "08h": "vitamina de mamão com leite desnatado e 1 colher de sopa de aveia",
+        "12h": "filé de peito de frango com espinafre e purê de batata doce",
+        "16h": "1 punhado de nozes",
+        "20h": "sopa de abóbora com gengibre"
+    },
+    "sábado": {
+        "08h": "panqueca de aveia com banana e mel",
+        "12h": "peixe grelhado com salada de rúcula e quinoa",
+        "16h": "1 iogurte grego com frutas",
+        "20h": "carne magra com legumes salteados"
+    },
+    "domingo": {
+        "08h": "1 fatia de pão integral com 1 colher de sopa de geleia sem açúcar",
+        "12h": "salada de atum com grãos, folhas verdes e azeite",
+        "16h": "1 maçã com canela",
+        "20h": "frango assado com batata-doce e brócolis"
+    }
+}

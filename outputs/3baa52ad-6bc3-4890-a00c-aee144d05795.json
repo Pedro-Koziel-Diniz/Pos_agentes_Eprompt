@@ -1,0 +1,44 @@
+{
+    "segunda-feira": {
+        "08h": " café da manhã: aveia cozida com frutas frescas",
+        "12h": "refeição 1: salada de legumes, proteína magra e arroz integral",
+        "16h": "refeição 2: frango grelhado com vegetais assados",
+        "20h": "refeição 3: sopa de legumes com pão integral"
+    },
+    "terça-feira": {
+        "08h": " café da manhã: iogurte natural, nozes e abacate",
+        "12h": "refeição 1: quinoa cozida com frutos do mar e vegetais frescos",
+        "16h": "refeição 2: salada de atum, ovos mexidos e arroz integral",
+        "20h": "refeição 3: feijoada caseira com pão integral"
+    },
+    "quarta-feira": {
+        "08h": " café da manhã: ovos mexidos com espinafre e abacate",
+        "12h": "refeição 1: salada de frutas, iogurte natural e granola",
+        "16h": "refeição 2: frango grelhado com vegetais assados",
+        "20h": "refeição 3: sopa de lentilhas com pão integral"
+    },
+    "quinta-feira": {
+        "08h": " café da manhã: aveia cozida com nozes e abacate",
+        "12h": "refeição 1: quinoa cozida com legumes frescos e proteína magra",
+        "16h": "refeição 2: salada de atum, ovos mexidos e arroz integral",
+        "20h": "refeição 3: feijoada caseira com pão integral"
+    },
+    "sexta-feira": {
+        "08h": " café da manhã: iogurte natural, frutas frescas e nozes",
+        "12h": "refeição 1: salada de legumes, proteína magra e arroz integral",
+        "16h": "refeião 2: frango grelhado com vegetais assados",
+        "20h": "refeião 3: sopa de legumes com pão integral"
+    },
+    "sábado": {
+        "08h": " café da manhã: ovos mexidos com espinafre e abacate",
+        "12h": "refeição 1: quinoa cozida com frutos do mar e vegetais frescos",
+        "16h": "refeição 2: salada de atum, ovos mexidos e arroz integral",
+        "20h": "refeião 3: feijoada caseira com pão integral"
+    },
+    "domingo": {
+        "08h": " café da manhã: aveia cozida com nozes e abacate",
+        "12h": "refeição 1: salada de frutas, iogurte natural e granola",
+        "16h": "refeião 2: frango grelhado com vegetais assados",
+        "20h": "refeião 3: sopa de lentilhas com pão integral"
+    }
+}
