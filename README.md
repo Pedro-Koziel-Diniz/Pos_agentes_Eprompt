@@ -1,4 +1,4 @@
-***Pos_agentes_Eprompt***
+**Pós Agentes Inteligentes - Eprompt**
 
 Repositório dedicado para o trabalho final desenvolvido na discipla de Engenharia de Prompts, da pós graduação de Agentes Inteligentes, pela UFG.
 
