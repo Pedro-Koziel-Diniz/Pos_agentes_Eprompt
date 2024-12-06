@@ -11,7 +11,7 @@ load_dotenv()
 
 def resposta_gpt_json(especificacoes, response_type=None, model="gpt-4o-mini"):
     # Initialize the OpenAI client
-    client = openai.OpenAI(api_key = "OEPNAIKEY")
+    client = openai.OpenAI(api_key = "OPENAIKEY")
 
     messages = [
         {
@@ -44,10 +44,7 @@ def resposta_gpt_json(especificacoes, response_type=None, model="gpt-4o-mini"):
     return  response_content
 
 especificacoes = input("Insira as informações necessárias para te ajudar a elaborar uma dieta, como seu sexo, idade, altura, peso, estilo de vida e objetivos: ")
-
 validator = resposta_gpt_json(especificacoes)
-#Meu nome é Marcos, tenho 22 anos, 1.85 de altura, 80 quilos, pratico esportes regurlarmente, e tenho o objetivo de perda de peso.
-
 
 # Diretório onde os arquivos serão salvos
 output_directory = "outputs"
