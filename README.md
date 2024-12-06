@@ -8,7 +8,7 @@ Trabalho desenvolvido: Elaboração de um auxiliar para planejamento de dietas, 
 
 Os slides da apresentação podem ser encontrado em: 
 
-https://www.canva.com/design/DAGYRoext_A/MTONG-scMVV7JNm8en6a_A/edit?utm_content=DAGYRoext_A&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton 
+https://www.canva.com/design/DAGYRoext_A/pBs01TCz7FhJF-0hiZnMNg/view?utm_content=DAGYRoext_A&utm_campaign=designshare&utm_medium=link&utm_source=editor  
 
 ## Estruturação:
 
