@@ -1,7 +1,7 @@
 [project]
-name = "ollama-visio-teste"
+name = "Pos_agentes_Eprompt"
 version = "0.1.0"
-description = "Add your description here"
+description = "Repositório dedicado para o trabalho final desenvolvido na disciplina de Engenharia de Prompts, da pós graduação de Agentes Inteligentes, pela UFG."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
