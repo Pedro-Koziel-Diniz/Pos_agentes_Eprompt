@@ -1,4 +1,5 @@
 import os
+import json
 import openai
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
@@ -8,7 +9,7 @@ load_dotenv()
 
 def resposta_gpt_json(especificacoes, response_type=None, model="gpt-4o-mini"):
     # Initialize the OpenAI client
-    client = openai.OpenAI(api_key = os.getenv("OPENAI_API_KEY")
+    client = openai.OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
 
     messages = [
         {
@@ -44,14 +45,34 @@ especificacoes = input("Insira as informações necessárias para te ajudar a el
 
 validator = resposta_gpt_json(especificacoes)
 
-# Inicialize o Guard com o ValidJson
+
+
+# Diretório onde os arquivos serão salvos
+output_directory = "outputs"
+os.makedirs(output_directory, exist_ok=True)  # Cria a pasta se ela não existir
+
+# Inicialize o Guard com o validador ValidJson
 guard = Guard().use(ValidJson, on_fail="exception")
 try:
+    # Validação do JSON
     guard.validate(validator)
     response_json = json.loads(validator)
-    print(response_json)
+    print("JSON validado com sucesso!")
+
+    # Gerar ID único para a conversa
     conversation_id = str(uuid.uuid4())
     print(f"ID da conversa: {conversation_id}")
+
+    # Salvar o JSON na pasta
+    output_filename = os.path.join(output_directory, f"{conversation_id}.json")
+    with open(output_filename, "w", encoding="utf-8") as json_file:
+        json.dump(response_json, json_file, indent=4, ensure_ascii=False)
+    print(f"JSON salvo com sucesso em: {output_filename}")
+
 except Exception as e:
+    # Gerar ID mesmo em caso de erro para rastreamento
+    conversation_id = str(uuid.uuid4())
+    print("Erro durante a validação do JSON:")
     print(validator)
     print(f"ID da conversa: {conversation_id}")
+    print(f"Detalhes do erro: {e}")
