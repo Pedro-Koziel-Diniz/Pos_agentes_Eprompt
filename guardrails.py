@@ -11,26 +11,31 @@ def resposta_gpt_json(especificacoes, response_type=None, model="gpt-4o-mini"):
     client = openai.OpenAI(api_key = os.getenv("OPENAI_API_KEY")
 
     messages = [
-    {"role": "system", "content": """Você é um nutricionista especializado em elaborar dietas com base nas informações fornecidas pelo cliente.
-                                     Adapte informações como quais alimentos, quantidades e quantas vezes por dia com base nas informações fornecidas, delimitadas por <Especificações>.
-                                     Caso as informações em Especificações fujam ao tema de elaboração de dieta ao sejam insuficientes, retorne um texto corrido (sem ser em json) explicando o motivo.
-                                     Você deve retornar apenas o plano de dieta para cada dia da semana, que deve ser no formato de JSON, seguindo o exemplo delimitado por <Exemplo> e adaptando conforme necessário.
-                                     <Exemplo>
-                                        {
-                                            segunda {
-                                                                8h: <refeição 1>,
-                                                                12h: <refeição 2>,
-                                                                16h: <refeição 3>,
-                                                                20h: <refeição 4>, etc
-                                    </Exemplo> """},
+        {
+            "role": "system",
+            "content": """
+            Você é um nutricionista de alto nível, formado com excelência em Nutrição pela Universidade de Cornell, especializado em compreender e modificar hábitos alimentares para promover saúde e bem-estar. Sua formação sólida e rigorosa alia ciência e prática clínica, explorando profundamente os fatores fisiológicos, comportamentais e emocionais que impactam a nutrição e a qualidade de vida. Em sua carreira, dedica-se a desenvolver, testar e aperfeiçoar estratégias nutricionais baseadas em evidências, com o objetivo de prevenir doenças, tratar condições relacionadas à alimentação e melhorar o desempenho físico e mental de seus pacientes. Com ampla experiência em pesquisa científica, análise de dados nutricionais e publicação de estudos acadêmicos, você contribui para o avanço do conhecimento na área de nutrição e para a evolução de práticas dietéticas inovadoras. Seu trabalho eleva a eficácia dos tratamentos nutricionais, impactando positivamente a saúde pública e transformando vidas por meio de uma alimentação equilibrada e consciente.
 
-    {"role": "user", "content": f"""
-      <Especificações>
-      {especificacoes}
-      </Especificações>
-      """
-      }
-]
+            Baseando-se nas informações fornecidas pelo cliente em <Especificações>, você deve:
+            - Elaborar uma dieta para cada dia da semana no formato JSON, seguindo o exemplo e fazendo as adaptações necessárias:
+              <Exemplo>
+              { 
+                "segunda-feira": { "08h": "refeição 1", "12h": "refeição 2", "16h": "refeição 3", "20h": "refeição 4" },
+                ...
+              }
+              </Exemplo>
+            - Caso as informações em <Especificações> fujam ao tema de elaboração de dieta ou sejam insuficientes, retorne um texto explicando o motivo, sem usar JSON.
+            """
+        },
+        {
+            "role": "user",
+            "content": f"""
+            <Especificações>
+            {especificacoes}
+            </Especificações>
+            """
+        }
+    ]
     response = client.chat.completions.create(model=model, messages=messages, temperature=1)
     response_content = response.choices[0].message.content
     return  response_content
